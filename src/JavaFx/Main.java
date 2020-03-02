@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class Main extends Application {
 
-    public static ArrayList<Student> students = new ArrayList<>();
+    public static ArrayList<Student> students = new ArrayList<>(); // variable
 
     public static void main(String[] args) {
         launch(args);
