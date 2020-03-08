@@ -11,7 +11,6 @@ import javafx.scene.control.*;
 import javafx.scene.control.TextField;
 
 public class Form {
-    public TextField txtID = new TextField();
     public TextField txtName = new TextField();
     public TextField txtDes = new TextField();
     public TextField txtPrice = new TextField();
@@ -26,15 +25,13 @@ public class Form {
             String password = "";
 
             Connection conn = DriverManager.getConnection(url,username,password);
-
-            int id = Integer.parseInt(txtID.getText());
             String name = txtName.getText();
             String des = txtDes.getText();
             int price = Integer.parseInt(txtPrice.getText());
             int amount = Integer.parseInt(txtAmount.getText());
 
             Products pr = new Products();
-            String sql_text = "INSERT INTO products(id,name,description,price,amount) VALUES ('"+id+"','"+name+"','"+des+"','"+price+"','"+amount+"')";
+            String sql_text = "INSERT INTO products(name,description,price,amount) VALUES ('"+name+"','"+des+"','"+price+"','"+amount+"')";
 
             Statement stm = conn.createStatement();
             int row_number = stm.executeUpdate(sql_text);

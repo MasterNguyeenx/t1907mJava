@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="599.9999000000025" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="Lab6fix.List">
+  <children>
+    <Pane layoutX="0.0" layoutY="2.0" prefHeight="400.0" prefWidth="599.9998779296875">
+      <children>
+        <ListView fx:id="lsView" layoutX="129.0" layoutY="93.0" prefHeight="215.0" prefWidth="343.0" />
+        <Text layoutX="231.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Danh sách sản phẩm" />
+        <Button onAction="#addtoCart" layoutX="281.0" layoutY="333.0" mnemonicParsing="false" text="thêm vào giỏ hàng" />
+        <Button onAction="#form" layoutX="231.0" layoutY="333.0" mnemonicParsing="false" text="+" />
+      </children>
+    </Pane>
+  </children>
+</AnchorPane>
