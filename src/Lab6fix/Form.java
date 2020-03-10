@@ -35,8 +35,8 @@ public class Form {
             prStm.setDouble(3,price);
             prStm.setInt(4,amount);
             if(!prStm.execute()){
-                Parent form = FXMLLoader.load(getClass().getResource("List.fxml"));
-                Main.mainStage.getScene().setRoot(form);
+                Main.mainStage.getScene().setRoot(Main.listPage);
+
             }else{
                 System.out.println("Error");
             }

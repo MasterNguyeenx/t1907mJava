@@ -3,6 +3,7 @@ package Lab6fix;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -18,16 +19,25 @@ public class Main extends Application {
         launch(args);
     }
 
+    public static Parent listPage;
+    public static Parent formPage;
+    public static Parent cartPage;
+
     @Override
     public void start(Stage primaryStage) throws Exception{
         Main.mainStage = primaryStage;
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("List.fxml"));
+            if(listPage == null){
+                Parent root = FXMLLoader.load(getClass().getResource("List.fxml"));
+                listPage = root;
+            }
+
             primaryStage.setTitle("Manage Product");
-            primaryStage.setScene(new Scene(root,600,400));
+            primaryStage.setScene(new Scene(listPage,600,400));
             primaryStage.show();
         }catch (Exception e){
             System.out.println("Error");
         }
     }
+
 }

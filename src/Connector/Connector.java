@@ -11,7 +11,7 @@ public class Connector {
 
     private static Connector con;
 
-    private Connector(){
+    public Connector(){
         try{
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection(url,username,password);
